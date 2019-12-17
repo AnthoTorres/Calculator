@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjF-nv-tV6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="293"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbE-5x-vQx">
+                                        <rect key="frame" x="0.0" y="200" width="409" height="93"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="70"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DevMtnLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dwT-gJ-5ZK">
+                                        <rect key="frame" x="8" y="8" width="398" height="190"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="dwT-gJ-5ZK" firstAttribute="top" secondItem="SjF-nv-tV6" secondAttribute="top" constant="8" id="K6P-II-d1Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="vbE-5x-vQx" secondAttribute="bottom" id="L0a-nZ-7MD"/>
+                                    <constraint firstAttribute="bottom" secondItem="dwT-gJ-5ZK" secondAttribute="bottom" constant="95" id="OFy-re-IW5"/>
+                                    <constraint firstItem="dwT-gJ-5ZK" firstAttribute="centerX" secondItem="SjF-nv-tV6" secondAttribute="centerX" id="W9x-Fw-mSg"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbE-5x-vQx" secondAttribute="trailing" constant="5" id="Wud-xl-ceF"/>
+                                    <constraint firstAttribute="trailing" secondItem="dwT-gJ-5ZK" secondAttribute="trailing" constant="8" id="Xhf-1v-qnh"/>
+                                    <constraint firstItem="vbE-5x-vQx" firstAttribute="top" secondItem="SjF-nv-tV6" secondAttribute="top" constant="200" id="Ywc-Ie-prO"/>
+                                    <constraint firstItem="dwT-gJ-5ZK" firstAttribute="leading" secondItem="SjF-nv-tV6" secondAttribute="leading" constant="8" id="jHF-zU-Eae"/>
+                                    <constraint firstItem="vbE-5x-vQx" firstAttribute="leading" secondItem="SjF-nv-tV6" secondAttribute="leading" id="z19-gI-Zmq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dQ-hu-t0l" userLabel="0">
+                                <rect key="frame" x="0.0" y="765.66666666666663" width="103.66666666666667" height="91"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="0" backgroundImage="square" catalog="system">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7s-T9-r8x"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fhc-WE-xgn">
+                                <rect key="frame" x="0.0" y="355.66666666666674" width="414" height="376"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tql-Va-Eh8">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="376"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVn-hM-ikp">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="103.66666666666667" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="AC" backgroundImage="square.fill" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vL-BL-zZC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu8-N5-vHj" userLabel="7">
+                                                <rect key="frame" x="0.0" y="95.666666666666657" width="103.66666666666667" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="7" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYV-Rh-yiF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWW-vQ-Vhq" userLabel="4">
+                                                <rect key="frame" x="0.0" y="189.6666666666666" width="103.66666666666667" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="4" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ocO-1A-d81"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7t-So-gyC" userLabel="1">
+                                                <rect key="frame" x="0.0" y="283.66666666666663" width="103.66666666666667" height="91.000000000000028"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="1" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nq-wE-80y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-eC-zxn">
+                                        <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="376"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnV-gc-kWv" userLabel="Negative">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="103.33333333333333" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="44"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="+/-" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oa8-Qk-nVD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-t5-RL0" userLabel="8">
+                                                <rect key="frame" x="0.0" y="95.666666666666657" width="103.33333333333333" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="8" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50X-8M-clJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02Z-6W-UdQ" userLabel="5">
+                                                <rect key="frame" x="0.0" y="189.6666666666666" width="103.33333333333333" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="5" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hj-fZ-Nie"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7md-TZ-tFd" userLabel="2">
+                                                <rect key="frame" x="0.0" y="283.66666666666663" width="103.33333333333333" height="91.000000000000028"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="2" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4YL-CF-MCM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rrc-mZ-zT5">
+                                        <rect key="frame" x="206.99999999999997" y="0.0" width="103.66666666666666" height="376"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erU-5j-mxC" userLabel="IDK">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="103.66666666666667" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="%" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnk-pD-RcM" userLabel="9">
+                                                <rect key="frame" x="0.0" y="95.666666666666657" width="103.66666666666667" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="9" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cum-Cs-QEn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt6-I6-qB3" userLabel="6">
+                                                <rect key="frame" x="0.0" y="189.6666666666666" width="103.66666666666667" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="6" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yzw-Cj-m0i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewx-d7-w7o" userLabel="3">
+                                                <rect key="frame" x="0.0" y="283.66666666666663" width="103.66666666666667" height="91.000000000000028"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="3" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aw-69-TZq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="y8P-Kb-8L2">
+                                        <rect key="frame" x="310.66666666666669" y="0.0" width="103.33333333333331" height="376"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTT-Vi-SpP" userLabel="%">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="103.33333333333333" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="/" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdm-OR-0kQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvq-BL-pl7" userLabel="*">
+                                                <rect key="frame" x="0.0" y="95.666666666666657" width="103.33333333333333" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="60"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="x" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Csw-cD-Oyq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0e-FH-6qx" userLabel="-">
+                                                <rect key="frame" x="0.0" y="189.6666666666666" width="103.33333333333333" height="91"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="70"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="-" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CWu-pu-o1M"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shz-rW-gOo" userLabel="+">
+                                                <rect key="frame" x="0.0" y="283.66666666666663" width="103.33333333333333" height="91.000000000000028"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="60"/>
+                                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="+" backgroundImage="square" catalog="system">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VA2-hL-guv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9c-Gz-XXq" userLabel=".">
+                                <rect key="frame" x="206.99999999999997" y="765.66666666666663" width="103.66666666666666" height="91"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="80"/>
+                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="." backgroundImage="square" catalog="system">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l35-Pp-DHg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6Q-0j-bSt" userLabel="=">
+                                <rect key="frame" x="310.66666666666669" y="765.66666666666663" width="103.33333333333331" height="91"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="=" backgroundImage="square" catalog="system">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNA-mq-Vcx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7dQ-hu-t0l" firstAttribute="centerX" secondItem="Tql-Va-Eh8" secondAttribute="centerX" id="28c-JH-2lL"/>
+                            <constraint firstItem="s9c-Gz-XXq" firstAttribute="height" secondItem="o6Q-0j-bSt" secondAttribute="height" id="3Lf-Li-rri"/>
+                            <constraint firstItem="SjF-nv-tV6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3c9-It-rUy"/>
+                            <constraint firstItem="o6Q-0j-bSt" firstAttribute="width" secondItem="shz-rW-gOo" secondAttribute="width" id="Hcz-j1-ek3"/>
+                            <constraint firstItem="Fhc-WE-xgn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JBX-k9-IBU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SjF-nv-tV6" secondAttribute="trailing" id="KMQ-zU-hIB"/>
+                            <constraint firstItem="Fhc-WE-xgn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="KiP-Wj-atn"/>
+                            <constraint firstItem="7dQ-hu-t0l" firstAttribute="height" secondItem="s9c-Gz-XXq" secondAttribute="height" id="LNM-km-9Qn"/>
+                            <constraint firstItem="Fhc-WE-xgn" firstAttribute="top" secondItem="SjF-nv-tV6" secondAttribute="bottom" constant="18.666666666666742" id="MF8-hZ-nsd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o6Q-0j-bSt" secondAttribute="bottom" constant="4" id="PG2-g2-nja"/>
+                            <constraint firstItem="s9c-Gz-XXq" firstAttribute="centerY" secondItem="o6Q-0j-bSt" secondAttribute="centerY" id="Te5-rS-tOB"/>
+                            <constraint firstItem="o6Q-0j-bSt" firstAttribute="height" secondItem="shz-rW-gOo" secondAttribute="height" id="arw-ht-jaZ"/>
+                            <constraint firstItem="SjF-nv-tV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dKv-vX-add"/>
+                            <constraint firstItem="s9c-Gz-XXq" firstAttribute="centerX" secondItem="rrc-mZ-zT5" secondAttribute="centerX" id="iw7-U3-Fhv"/>
+                            <constraint firstItem="o6Q-0j-bSt" firstAttribute="centerX" secondItem="y8P-Kb-8L2" secondAttribute="centerX" id="lMC-Mq-Dz2"/>
+                            <constraint firstItem="s9c-Gz-XXq" firstAttribute="width" secondItem="o6Q-0j-bSt" secondAttribute="width" id="mCb-aU-wIO"/>
+                            <constraint firstItem="7dQ-hu-t0l" firstAttribute="centerY" secondItem="s9c-Gz-XXq" secondAttribute="centerY" id="muM-5V-CQc"/>
+                            <constraint firstItem="Fhc-WE-xgn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wNR-xu-5Xh"/>
+                            <constraint firstItem="7dQ-hu-t0l" firstAttribute="width" secondItem="s9c-Gz-XXq" secondAttribute="width" id="xEs-0X-91Y"/>
+                            <constraint firstItem="Fhc-WE-xgn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.419643" id="yZK-RQ-UJF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="vbE-5x-vQx" id="ce8-0M-yIX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DevMtnLogo" width="1600" height="889"/>
+        <image name="square" catalog="system" width="64" height="56"/>
+        <image name="square.fill" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
